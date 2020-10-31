@@ -13,7 +13,6 @@ var package = Package(
         .target(name: "ImGuizmo", dependencies: ["CImGuizmo"]),
         .target(name: "CImGuizmo", dependencies: ["CImGui"]),
         .target(name: "AutoWrapper"),
-        .testTarget(name: "ImGuizmoTests", dependencies: ["ImGuizmo"])
     ],
     cxxLanguageStandard: .cxx11
 )

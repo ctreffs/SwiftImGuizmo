@@ -14,7 +14,7 @@ extension Array {
 /// Compute the prefix sum of `seq`.
 public func scan<
     S: Sequence, U
-    >(_ seq: S, _ initial: U, _ combine: (U, S.Iterator.Element) -> U) -> [U] {
+>(_ seq: S, _ initial: U, _ combine: (U, S.Iterator.Element) -> U) -> [U] {
     var result: [U] = []
     result.reserveCapacity(seq.underestimatedCount)
     var runningResult = initial

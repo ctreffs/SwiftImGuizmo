@@ -11,36 +11,10 @@ public enum Exceptions {
     /// but are present in definitions.json
     ///
     /// causes "Use of unresolved identifier '...'" compiler error.
-    public static let unresolvedIdentifier: Set<String> = [
-        "ImChunkStream_clear",
-        "ImChunkStream_empty",
-        "ImChunkStream_size",
-        "ImPool_Clear",
-        "ImPool_GetSize",
-        "ImPool_RemovePoolIdx",
-        "ImPool_Reserve",
-        "ImVector__grow_capacity",
-        "ImVector_capacity",
-        "ImVector_clear",
-        "ImVector_empty",
-        "ImVector_pop_back",
-        "ImVector_reserve",
-        "ImVector_resizeNil",
-        "ImVector_shrink",
-        "ImVector_size",
-        "ImVector_size_in_bytes",
-        "ImVector_swap",
-        "igImFontAtlasBuildMultiplyCalcLookupTable",
-        "igImFontAtlasBuildMultiplyRectAlpha8",
-        "igImFontAtlasBuildRender1bppRectFromString",
-        "igImTriangleBarycentricCoords"
-    ]
+    public static let unresolvedIdentifier: Set<String> = []
 
     /// causes "Use of undeclared type '...'" compiler error.
-    public static let undeclardTypes: [String: Declaration] = [
-        "ImChunkStream": Declaration(name: "ImChunkStream", typealiasType: "OpaquePointer"),
-        "ImPool": Declaration(name: "ImPool", typealiasType: "OpaquePointer")
-    ]
+    public static let undeclardTypes: [String: Declaration] = [:]
 
     public static let stripPrefix: Set<String> = [
         "ig"
