@@ -1,0 +1,3 @@
+[submodule "3rdparty/cimguizmo"]
+	path = 3rdparty/cimguizmo
+	url = https://github.com/cimgui/cimguizmo.git
