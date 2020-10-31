@@ -24,13 +24,15 @@ submodule:
 updateCLibImGui: submodule
 
 copyLibImGui:
-	cp $(imgui_src)/imgui/*.h $(c_imgui_src)/imgui
-	cp $(imgui_src)/imgui/*.cpp $(c_imgui_src)/imgui
-	cp $(imgui_src)/generator/output/cimgui.h $(c_imgui_src)/include
-	cp $(imgui_src)/generator/output/cimgui.cpp $(c_imgui_src)
+	-mkdir $(c_imgui_src)/include
+	
+	cp $(imgui_src)/*.h $(c_imgui_src)/include
+	cp $(imgui_src)/*.cpp $(c_imgui_src)
+	cp $(imgui_src)/ImGuizmo/*.h $(c_imgui_src)
+	cp $(imgui_src)/ImGuizmo/*.cpp $(c_imgui_src)
 
 generateCInterface:
-	cd $(imgui_src)/generator && luajit ./generator.lua gcc true sdl glfw glut metal
+	cd $(imgui_src)/generator && luajit ./generator.lua gcc #true sdl glfw glut metal
 
 buildCImGui: updateCLibImGui generateCInterface copyLibImGui
 
