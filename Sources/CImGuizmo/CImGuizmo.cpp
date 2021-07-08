@@ -2,7 +2,7 @@
 //based on ImGuizmo.h file version  1.61 WIP from https://github.com/CedricGuillemet/ImGuizmo
 
 #include <stdio.h>
-#include <cimgui.h>
+#include <CImGui.h>
 
 #include "CImGuizmo.h"
 #include "ImGuizmo.h"
